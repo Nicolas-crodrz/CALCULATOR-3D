@@ -1,0 +1,136 @@
+// GENERAL
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'CalcDigit';
+  src: url(../fonts/digital-7.ttf);
+}
+
+body {
+  height: 100vh;
+  background-color: #1f1f1f;
+}
+
+h1{
+  margin-top: 20px;
+  display: flex;
+  color: #67e6dc;
+  letter-spacing: 2px;
+  text-shadow: 0 0 12px #7efff5;
+  justify-content: center;
+}
+p{
+  margin-top: 20px;
+  display: flex;
+  color: #67e6dc;
+  letter-spacing: 2px;
+  text-shadow: 0 0 12px #7efff5;
+  justify-content:center;
+}
+.calculadora {
+  position: relative;
+  padding: 65px;
+  width: 480px;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  .container-result {
+    position: relative;
+    font-family: 'CalcDigit';
+    width: calc(100% - 28px);
+    left: 14px;
+    text-align: right;
+    background-color: #2d353f;
+    color: #67e6dc;
+    margin-bottom: 32px;
+    border-radius: 8px;
+    letter-spacing: 2px;
+    text-shadow: 0 0 12px #7efff5;
+    &::after{
+      content: '';
+      position: absolute;
+      height: calc(100% + 28px);
+      width: calc(100% + 28px);
+      top: -14px;
+      left: -14px;
+      background-color: #526174;
+      border-radius: 18px;
+      box-shadow: 0 8px 0 4px #2d353f;
+      z-index: -1;
+    }
+    div{
+      position: relative;
+      padding: 4px 8px;
+      &::before{
+        content: '8888888888';
+        position: absolute;
+        top: 4px;
+        left: 8px;
+        opacity: 0.1;
+      }
+    }
+    .value{
+      height: 40px;
+      font-size: 32px;
+      &::before{
+        content: '888888888888888888';
+        left: 6px;
+      }
+    }
+    .result{
+      height: 70px;
+      font-size: 60px;
+    }
+  }
+  .number-container {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 32px;
+    line-height: 0;
+    label {
+      position: relative;
+      cursor: pointer;
+      display: block;
+      top: 0;
+      width: calc(25% - 16px);
+      padding: 16px 20px;
+      margin: 18px 8px;
+      color: #ffffff;
+      background: linear-gradient(#2d353f, #526174);
+      border-radius: 12px;
+      text-align: center;
+      transition: all linear 0.16s;
+      &:active{
+        top: 12px;
+      }
+      &::after{
+        content: '';
+        position: absolute;
+        height: 92px;
+        width: calc(100% + 3px);
+        top: -4px;
+        left: -3px;
+        background: linear-gradient(90deg,#526174, #2d353f 15%, #2d353f 85%, #526174);
+        border: 2px solid #242b33;
+        border-radius: inherit;
+        z-index: -1;
+        transition: all linear 0.16s;
+      }
+      &:active::after{
+        height: 81px;
+      }
+      input {
+        font-size: inherit;
+        color: inherit;
+        cursor: inherit;
+        border: 0;
+        background-color: transparent;
+      }
+    }
+  }
+}
