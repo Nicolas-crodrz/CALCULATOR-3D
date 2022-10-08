@@ -66,6 +66,9 @@ La estructura de los archivos es la siguiente:
 │   ├── 📁fonts
 │   │   └── digital-7.ttf
 │   │  
+│   ├── 📁img
+│   │   └── README-GIF.gif
+│   │ 
 │   ├── 📁js
 │   │   └── script.js
 │   │  
@@ -77,7 +80,7 @@ La estructura de los archivos es la siguiente:
 
 ## 📷 Galería
 
-Fotos de tu proyecto.
+![LOGO](./CALCULATOR-3D/img/README-GIF.gif "Gif de la Calculadora")
 
 ## 🌟 Crédito/Reconocimiento
 
